@@ -2,7 +2,9 @@
 #define STRING_HELPER_HPP
 
 #include <string>
+#include <sstream>
 #include <algorithm>
+
 
 namespace Helper
 {
@@ -18,6 +20,15 @@ namespace Helper
                                       {
                                           return ::isspace(c);
                                       });
+        }
+
+        static int atoi(std::string s)
+        {
+
+            std::stringstream ss(s);
+            int val = 0;
+            ss >> val;
+            return val;
         }
     };
 } // namespace sTRİNG
