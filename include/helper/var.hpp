@@ -19,7 +19,7 @@ public:
         return _getter(); 
     }
 
-    Var<T>& operator=(const T &value)
+    Var<T>& operator =(const T &value)
     {
         _setter(value);
         return *this;
